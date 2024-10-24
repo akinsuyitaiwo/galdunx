@@ -10,7 +10,7 @@ export const registerUser = async( data: { username: string; password: string })
     throw new Error( "User with user already exists")
   } 
   	const hashedPassword = await hashPassword(password);
-		await models.User.create({
+		return await models.User.create({
 			username,
 			password: hashedPassword
 		});
