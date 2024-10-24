@@ -6,4 +6,4 @@ const app = server()
 
 
 
-export default app;  
+export  {app};  
